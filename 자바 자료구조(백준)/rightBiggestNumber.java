@@ -26,7 +26,6 @@ public class rightBiggestNumber {
         for (i = 0; i < num; i++) {
             if (stack.empty() == true) {
                 stack.push(a[i]);
-                //숫자가 들어갔을 때부터 비교를 해줘야한다(고치기)
             }
             else {
                 while (stack.empty() != true) {
@@ -37,18 +36,13 @@ public class rightBiggestNumber {
                         break;
                     } else if ((int) stack.peek() > a[i]) {
                         int max = (int)stack.peek();
-                        stack.push(a[i]);
-                        int j = i+1;
-                        while(max>a[j] && j<num){
-                            ++j;
-                            if(j>num && max>a[j]){
-                                stack.pop();
-                                System.out.println(-1);
-                                break;
-                            }
-
+                        if(max>a[i]){
+                            stack.push(a[i]);
+                            break;
+                        }else if(i==num && max>a[num]){
+                            System.out.println(-1);
+                            break;
                         }
-                        break;
                     }
                     }
                 }
