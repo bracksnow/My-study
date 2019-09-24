@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>과제 제출용 자기소개하기</title>
+        <style>
+            h1{
+                text-align: center;
+            }   
+            tr{
+                text-align: center; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>나의 자기소개하기</h1>
+        <div>
+            <h2>나에 대해서</h2>
+            <ol>
+                <li>이름:<a href="https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=%EA%B6%8C%EC%84%A0%EA%B5%AC">권선구</a></li>
+                <li>출생지:인천</li>
+                <li>생년월일:1997-03-10</li>
+                <li>현재 거주지:서울</li>
+                <li>좋아하는 아이돌 그룹:<a href="ohmygirl.html">오마이걸</a></li>
+                <li>9살때까지 인천에서 살았으나 그 이후부터 쭉 서울시 중랑구에서 거주</li>
+            </ol>
+        </div><br>
+
+        <div>   
+            <h3>내가 다닌 학교들</h3>
+            <ul>
+                <li>초등학교:한길초등학교(인천), 중화초등학교</li>
+                <li>중학교:신현중학교</li>
+                <li>고등학교:송곡남자고등학교</li>
+            </ul>
+        </div><br>
+
+        <div>
+            <h2>비행기를 처음타고 간 여행지:제주도</h2>
+            <table border="1">
+                <caption>제주도 요약</caption>
+                <thead>
+                    <tr>
+                        <td>면적</td>
+                        <td>인구</td>
+                        <td>주도</td>
+                        <td>축구팀</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1,849km²</td>
+                        <td>60.48만</td>
+                        <td>제주시</td>
+                        <td>제주유나이티드</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">출처:구글</td>
+                    </tr>
+                </tfoot>
+            </table><br>  
+            <img src="jejudo.jpg" alt="제주도 사진입니다"><br> 
+        </div><br>        
+        <div>  
+            <h2>제주도에서 인기있는 숙소유형조사</h2>
+            <form action=" " method="post">
+                이름:<input type="text" name="uname" value="name">
+                <input type="button" value="중복검색"><br>
+                성별:
+                남<input type="radio" name="ugender" value="m" checked>
+                여<input type="radio" name="ugender" value="f"><br>
+                숙소유형:
+                호텔<input type="checkbox" name="urooms" value="hotel">
+                모텔<input type="checkbox" name="urooms" value="motel">
+                게스트하우스<input type="checkbox" name="urooms" value="guest">
+                민박<input type="checkbox" name="urooms" value="house"><br>
+                주소:
+                <select name="ucity">
+                    <option value="jeju">제주시</option>
+                    <option value="seogwipo">서귀포시</option>
+                </select><br>
+                사연:<br>
+                <textarea cols="30" rows="5" name="story"></textarea><br>
+                <input type="button" value="submit">
+            </form>
+        </div><br>
+    </body>
+</html>
