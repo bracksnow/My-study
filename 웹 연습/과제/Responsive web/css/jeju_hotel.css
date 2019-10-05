@@ -1,0 +1,10 @@
+<style>
+    .back{
+        width: 320px;
+        background-color: blanchedalmond;
+        margin: auto;
+    }
+    .back input[type = "text"]{
+        color: blue;
+    }
+</style>

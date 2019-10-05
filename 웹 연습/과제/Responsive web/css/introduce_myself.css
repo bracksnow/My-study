@@ -1,0 +1,54 @@
+        <style>
+            h1{
+                text-align: center;
+                padding: 30px;
+                margin: 30px  auto;
+                width: 740px;
+                
+            }   
+            .back{
+                width: 800px;
+                background-color: blanchedalmond;
+                margin: 50px auto;
+            }
+            .back ol{
+                margin: 30px auto;
+            }
+            .back>div{
+                background-color: grey;
+            }
+            .school{
+                background-color: grey;
+            }
+            @media screen and (max-width:768px){
+                h1{
+                    text-align: center;
+                    padding: 10px;
+                    margin: 5px  auto;
+                    width: 275px;
+                    
+                }
+                .back{
+                    width: 300px;
+                    background-color: blanchedalmond;
+                    margin: 0 auto;
+                }
+                .back ol{
+                    margin: 10px auto;
+                }
+            }
+            @media screen and (min-width:767px) and (max-width:1025px){
+                h1{
+                    text-align: center;
+                    padding: 30px;
+                    margin: 30px  auto;
+                    width: 740px;
+                }
+                .back{
+                    width: 740px;
+                    background-color: blanchedalmond;
+                    margin: 0px auto;
+                }
+
+            }
+        </style>

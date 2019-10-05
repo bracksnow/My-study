@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jeju_hotel</title>
+    <link rel="stylesheet" href="css/jeju_hotel.css">
+    
+    <style>
+        .back{
+            width: 300px;
+            background-color: blanchedalmond;
+            margin: 0 auto;
+        }
+        .back input[type = "text"]{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+    <h2>제주도에서 인기 숙소조사</h2>
+    <form method="post">
+        이름:<input type="text" name="uname" value="name">
+        <input type="button" value="중복검색"><br>
+        성별:
+        남<input type="radio" name="ugender" value="m" checked>
+        여<input type="radio" name="ugender" value="f"><br>
+        숙소유형:
+        호텔<input type="checkbox" name="urooms" value="hotel">
+        모텔<input type="checkbox" name="urooms" value="motel">
+        게스트하우스<input type="checkbox" name="urooms" value="guest">
+        민박<input type="checkbox" name="urooms" value="house"><br>
+        주소:
+        <select name="ucity">
+            <option value="jeju">제주시</option>
+            <option value="seogwipo">서귀포시</option>
+        </select><br>
+        사연:<br>
+            <textarea cols="30" rows="5" name="story"></textarea><br>
+            <input type="button" value="submit">
+        </form>
+    </div>
+</body>
+</html>
