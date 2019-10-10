@@ -1,0 +1,31 @@
+
+footer{
+    color: white;
+    text-align: center;
+    background-color: grey;
+    
+    }
+.container{
+    text-align: center;
+    }
+.project_title{
+    text-align: center;
+    }
+.card{
+    display:inline-flex;
+    margin: 0 60px;
+    width: 18rem;
+    }
+@media screen and (max-width:767px){
+    .card{
+        margin: 0 15px;
+        width: 18rem; 
+    }
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+    .card{
+        margin:0 15px;
+        width: 18rem;
+    }
+    
+}
