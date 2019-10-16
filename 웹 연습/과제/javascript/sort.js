@@ -13,17 +13,16 @@ function swap(arr, i, j) {
 function quickSort(arr, left, right) {
   var pl = left;
   var pr = right;
-  var pivot = arr[(pl+pr)/2];
+  var pivot = arr[parseInt((pl+pr)/2)];
   do{
-      while(arr[pl]<pivot){
+      while(arr[pl]<pivot)
         pl++;
-      }
-      while(arr[pr]>pivot){
+      
+      while(arr[pr]>pivot)
         pr--;
-      }
-      if(pl<=pr){
-          swap(arr,pl++,pr--);
-      }
+      
+      if(pl<=pr)
+          swap(arr,pl++,pr--);     
   }while(pl<=pr);
 
   if(left<pr){
