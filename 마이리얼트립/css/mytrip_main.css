@@ -1,0 +1,48 @@
+footer a{
+  color: black;
+}
+footer a:hover{
+  color: black;
+  text-decoration: none;
+}
+.slideshow {
+  width: 1150px;
+  height: 200px;
+  position: relative;
+  padding: 40px 0px;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+.slideshow img {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.slideshow img.active {
+  opacity: 1.0;
+}
+.indicator {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+.indicator ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.indicator ul li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  border: 2px solid grey;
+}
+
+.indicator ul li.active {
+  background-color:grey;
+}

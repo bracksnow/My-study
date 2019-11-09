@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/mytrip_main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Main</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+</head>
 <body>
     <header>
-            <nav class="navbar navbar-dark bg-primary">
-                <span class="navbar-brand mb-0 h1">mytrip</span>
+            <nav class="navbar navbar-dark bg-primary" style="padding: 0 5%;"> 
+                <a class="navbar-brand mb-0 h1" href="Main.html">mytrip</a>
                 <form class="form-inline">
-                    <button class="btn btn-primary" type="button">파트너 등록하기</button>
-                    <button class="btn btn-primary" type="button">로그인</button>
-                    <button class="btn btn-primary" type="button">회원가입</button>
+                    <a class="btn btn-primary" href="#" role="button">파트너 등록하기</a>
+                    <a class="btn btn-primary" href="login.html" role="button">로그인</a>
+                    <a class="btn btn-primary" href="#" role="button">회원가입</a>
                 </form>
             </nav>
-            <nav class="navbar navbar-dark bg-primary">
+            <nav class="navbar navbar-dark bg-primary" style="padding: 0 4%;">
                 <form class="form-inline">
                     <button class="btn btn-primary" type="button">초기여행</button>
                     <button class="btn btn-primary" type="button">중기여행</button>
@@ -25,76 +27,126 @@
                 </form>
             </nav>
     </header>
-    <body>
-        <nav class="navbar navbar-light">
-            <h2><b>어디로 가세요?</b></h2>
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </nav>
-        <div>
-            <h4><b>진짜 가이드의 추천패키지</b></h4>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <section>
+        <div class="bg-primary" style="padding: 0 4%;">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <h2 class="text-white" style="text-align: center;"><b>어디로 떠나세요?</b></h2>
+                    <form action="">
+                        <div class="form-group mb-4">
+                          <input type="search" placeholder="여행지나 상품을 검색해보세요" aria-describedby="button-addon" class="form-control border-primary">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    </body>
+        <div class="slideshow">
+                <img src="img/001.jpg" class="active" alt="프랑수">
+                <img src="img/002.jpg" alt="독일">
+                <img src="img/003.jpg" alt="헝가리">
+                <img src="img/004.jpg" alt="스위스">
+                <img src="img/005.jpg" alt="아일랜드">
+            </div>
+          <div class="indicator">
+            <ul>
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+            <h4 style="padding: 0 4%;"><b>진짜 가이드의 추천패키지</b></h4>
+            <div class="card-deck mt-5" style="padding: 0 4%;">
+            <div class="card" style="width: 18rem">
+                <img src="img/hong-kong-1081704_640.jpg" class="card-img-top" alt="홍콩전경">
+                <div class="card-body">
+                    <h5 class="card-title">홍콩 야경패키지</h5>
+                    <p class="card-text">홍콩의 야경과 음식을 위주로 한 패키지</p>
+                    <a href="#" class="btn btn-primary">구경하기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img/greece-1594689_640.jpg" class="card-img-top" alt="그리스 파르테논 신전">
+                <div class="card-body">
+                        <h5 class="card-title">그리스 미니패키지</h5>
+                        <p class="card-text">그리스의 주요관광지만 버스로 도는 패키지</p>
+                        <a href="#" class="btn btn-primary">구경하기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img/boat-164989_640.jpg" class="card-img-top" alt="다낭베이">
+                <div class="card-body">
+                    <h5 class="card-title">다낭베이 패키지</h5>
+                    <p class="card-text">다낭베이에서 음식을 먹으면서 해수욕을 즐기는 패키지</p>
+                    <a href="#" class="btn btn-primary">구경하기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img/london-3078109_640.jpg" class="card-img-top" alt="런던 타워브릿지">
+                <div class="card-body">
+                    <h5 class="card-title">런던 야경패스</h5>
+                    <p class="card-text">런던의 야경을 버스로 도는 패키지</p>
+                    <a href="#" class="btn btn-primary">구경하기</a>
+                </div>
+            </div>
+        </div>
+            <div class="card-deck mt-5"style="padding: 0 4%;">
+            <div class="card" style="width: 18rem;">
+                <img src="img/amsterdam-4230946_640.jpg" class="card-img-top" alt="네덜란드 암스테르담">
+                <div class="card-body">
+                    <h5 class="card-title">암스테르담 미니 패키지</h5>
+                    <p class="card-text">암스테르담의 주요 명소와 음식을 즐기는 패키지 </p>
+                    <a href="#" class="btn btn-primary">구경하기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img/matterhorn-984128_640.jpg" class="card-img-top" alt="스위스 마터호른">
+                <div class="card-body">
+                    <h5 class="card-title">마터호른 산행패키지</h5>
+                    <p class="card-text">마터호른을 직접 올라가는 패키지</p>
+                    <a href="#" class="btn btn-primary">구경하기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img/spain-4522800_640.jpg" class="card-img-top" alt="알람브라">
+                <div class="card-body">
+                    <h5 class="card-title">스페인 그라나다 미니패키지</h5>
+                    <p class="card-text">알람브라 궁전과 함께 음식을 즐기는 패키지</p>
+                    <a href="#" class="btn btn-primary">구경하기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="img/trondheim-2074284_640.jpg" class="card-img-top" alt="노르웨이 트론해잉행집">
+                <div class="card-body">
+                    <h5 class="card-title">노르웨이 셀카패키지</h5>
+                    <p class="card-text">노르웨이의 사진명소를 도는 패키지</p>
+                    <a href="#" class="btn btn-primary">구경하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <hr>
-       <div class="bg-light">
-
+       <div style="padding: 0 4%;">
+           <h4>전화번호:1644-5000</h4><br>
+           <p>영업시간:09:00-22:00</p>
+           <p>연중무휴/점심 12:00~13:00</p>
+           <hr>
        </div>
-        
+       <div style="padding: 0 4%;">
+           <a href="전자상거래.html">이용약관</a>
+           <a href="마이트립+처리방침.html">개인정보 처리방침</a>
+           <p>상호명 (주)마이트립 | 대표 김철수 | 개인정보보호책임자 김철수 | 사업자등록번호 xxx-xx-xxxxx 사업자정보확인 | 통신판매업신고번호 xxxx-서울서초-xxxx</p>
+           <p>주소 서울특별시 중구 세종대로 327, 대종세종타워 18층 | 이메일 help@mytrip.com | 마케팅/제휴 문의 marketing@mytrip.com</p>
+       </div>
     </footer>
+    <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+	<script src="javascript/slideshow.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
 </body>
 </html>
