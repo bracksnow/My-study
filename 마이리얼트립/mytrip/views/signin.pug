@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  section(style='padding:10% 30% 10% 30%;')
+    .card
+        article.card-body
+            h4.card-title.mb-4.mt-1 로그인
+            p
+              a.btn.btn-block.btn-outline-primary(href='/auth/facebook')
+                  i.fab.fa-facebook-f
+                  | 페이스북으로 로그인하기
+            hr
+            form.form-signin(action='/signin', method='POST')
+                .form-group
+                    input.form-control(name='email', placeholder='이메일', type='email')
+                .form-group
+                    input.form-control(name = 'password',placeholder='******', type='password')
+                .row
+                    .col-md-12
+                        .form-group
+                            button.btn.btn-primary.btn-block(type='submit') 로그인  
+                    .row
+                        .col-md-12
+                            a.text-info(href='/users/new') 회원가입
