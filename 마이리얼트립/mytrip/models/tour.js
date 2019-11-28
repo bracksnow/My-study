@@ -1,0 +1,26 @@
+const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
+const Schema = mongoose.Schema;
+//id라는 필드를 monodb에서 만들기 때문에 User._id라는 필드를 넣도록 만들어 주면 된다
+
+var schema = new Schema({
+  author: { type: Schema.Types.ObjectId, ref: 'User' },
+  title: {type: String, trim: true, required: true},
+  content: {type: String, trim: true, required: true},
+  price:{type:Number, default:0, required:true, min:0},
+  day:{type:Number, default:0, required:true,min:0},
+  country:{type:String, required:true},
+  city:{type:String, required:true},
+  number_of_people:{type:Number,default:0, required:true},
+  createdAt: {type: Date, default: Date.now},
+  numLikes: {type: Number, default: 0},
+  numAnswers: {type: Number, default: 0},
+  numReads: {type: Number, default: 0},
+}, {
+  toJSON: { virtuals: true},
+  toObject: {virtuals: true}
+});
+schema.plugin(mongoosePaginate);
+var Tour = mongoose.model('Tour', schema);
+
+module.exports = Tour;

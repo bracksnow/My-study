@@ -3,22 +3,28 @@ header
     a.navbar-brand.mb-0.h1(href='/') mytrip
     form.form-inline
       if (!currentUser)
-        a.btn.btn-primary(href='#', role='button') 파트너 등록하기
+        a.btn.btn-primary(href='/users/guide_new', role='button') 파트너 등록하기
         a.btn.btn-primary(href='/signin', role='button') 로그인
         a.btn.btn-primary(href='/users/new', role='button') 회원가입
       else
         a.btn.btn-primary(href='/signin', role='button') 위시리스트
         a.btn.btn-primary(href='/users/new', role='button') 예약내역
-        li.nav-item.dropdown
-          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-            | Dropdown link
-          .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-            a.dropdown-item(href=`/users/${currentUser._id}`) 프로필 관리
-            a.dropdown-item(href='/signout') 로그아웃
+        .dropdown
+          a#dropdownMenuLink.btn.btn-primary.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | 더보기
+          .dropdown-menu(aria-labelledby='dropdownMenuLink')
+            if (currentUser.guideNum)
+              a.dropdown-item(href=`/users/${currentUser._id}/edit`) 프로필 관리
+              a.dropdown-item(href=`/tours/new`) 상품등록하기
+              a.dropdown-item(href='/signout') 로그아웃
+            else
+              a.dropdown-item(href=`/users/${currentUser._id}/edit`) 프로필 관리
+              a.dropdown-item(href='/signout') 로그아웃
 
+              
   nav.navbar.navbar-dark.bg-primary(style='padding: 0 4%;')
     form.form-inline
-      a.btn.btn-primary(href='#', role='button') 단기여행
-      a.btn.btn-primary(href='#', role='button') 중기여행
-      a.btn.btn-primary(href='#', role='button') 장기여행
-      a.btn.btn-primary(href='#', role='button') 여행지 전체
+      a.btn.btn-primary(href=`/tours/tour?q={'day<4'}`, role='button') 단기여행
+      a.btn.btn-primary(href='/tours', role='button') 중기여행
+      a.btn.btn-primary(href='/tours', role='button') 장기여행
+      a.btn.btn-primary(href="/tours", role='button') 여행지 전체

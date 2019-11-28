@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  .container
+    h1.main-title 여행상품 변경
+    form(action=`/tours/${tour.id}`, method="POST")
+      input(type="hidden", name="_method", value="PUT")
+      include _form
+      button.btn.btn-outline-primary(type="submit") 여행상품 변경하기

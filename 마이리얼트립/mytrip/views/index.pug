@@ -8,15 +8,15 @@ block content
                 .col-md-auto
                     h2.text-white(style='text-align: center;')
                         b 어디로 떠나세요?
-                    form(action='')
+                    form(action='/questions', method='GET')
                         .form-group.mb-4
-                            input.form-control.border-primary(type='search', placeholder='여행지나 상품을 검색해보세요', aria-describedby='button-addon')
+                            input.form-control.border-primary(type='search', placeholder='여행지나 상품을 검색해보세요', aria-describedby='button-addon', name='term',value = term)
     .slideshow
-        img.active(src='img/001.jpg', alt='프랑수')
-        img(src='img/002.jpg', alt='독일')
-        img(src='img/003.jpg', alt='헝가리')
-        img(src='img/004.jpg', alt='스위스')
-        img(src='img/005.jpg', alt='아일랜드')
+        img.active(src='/images/001.jpg', alt='프랑수')
+        img(src='/images/002.jpg', alt='독일')
+        img(src='/images/003.jpg', alt='헝가리')
+        img(src='/images/004.jpg', alt='스위스')
+        img(src='/images/005.jpg', alt='아일랜드')
     .indicator
         ul
             li.active
@@ -28,50 +28,50 @@ block content
         b 진짜 가이드의 추천패키지
     .card-deck.mt-5(style='padding: 0 4%;')
         .card(style='width: 18rem')
-            img.card-img-top(src='img/hong-kong-1081704_640.jpg', alt='홍콩전경')
+            img.card-img-top(src='/images/hong-kong-1081704_640.jpg', alt='홍콩전경')
             .card-body
                 h5.card-title 홍콩 야경패키지
                 p.card-text 홍콩의 야경과 음식을 위주로 한 패키지
                 a.btn.btn-primary(href='#') 구경하기
         .card(style='width: 18rem;')
-            img.card-img-top(src='img/greece-1594689_640.jpg', alt='그리스 파르테논 신전')
+            img.card-img-top(src='/images/greece-1594689_640.jpg', alt='그리스 파르테논 신전')
             .card-body
                 h5.card-title 그리스 미니패키지
                 p.card-text 그리스의 주요관광지만 버스로 도는 패키지
                 a.btn.btn-primary(href='#') 구경하기
         .card(style='width: 18rem;')
-            img.card-img-top(src='img/boat-164989_640.jpg', alt='다낭베이')
+            img.card-img-top(src='/images/boat-164989_640.jpg', alt='다낭베이')
             .card-body
                 h5.card-title 다낭베이 패키지
                 p.card-text 다낭베이에서 음식을 먹으면서 해수욕을 즐기는 패키지
                 a.btn.btn-primary(href='#') 구경하기
         .card(style='width: 18rem;')
-            img.card-img-top(src='img/london-3078109_640.jpg', alt='런던 타워브릿지')
+            img.card-img-top(src='/images/london-3078109_640.jpg', alt='런던 타워브릿지')
             .card-body
                 h5.card-title 런던 야경패스
                 p.card-text 런던의 야경을 버스로 도는 패키지
                 a.btn.btn-primary(href='#') 구경하기
     .card-deck.mt-5(style='padding: 0 4%;')
         .card(style='width: 18rem;')
-            img.card-img-top(src='img/amsterdam-4230946_640.jpg', alt='네덜란드 암스테르담')
+            img.card-img-top(src='/images/amsterdam-4230946_640.jpg', alt='네덜란드 암스테르담')
             .card-body
                 h5.card-title 암스테르담 미니 패키지
                 p.card-text 암스테르담의 주요 명소와 음식을 즐기는 패키지 
                 a.btn.btn-primary(href='#') 구경하기
         .card(style='width: 18rem;')
-            img.card-img-top(src='img/matterhorn-984128_640.jpg', alt='스위스 마터호른')
+            img.card-img-top(src='/images/matterhorn-984128_640.jpg', alt='스위스 마터호른')
             .card-body
                 h5.card-title 마터호른 산행패키지
                 p.card-text 마터호른을 직접 올라가는 패키지
                 a.btn.btn-primary(href='#') 구경하기
         .card(style='width: 18rem;')
-            img.card-img-top(src='img/spain-4522800_640.jpg', alt='알람브라')
+            img.card-img-top(src='/images/spain-4522800_640.jpg', alt='알람브라')
             .card-body
                 h5.card-title 스페인 그라나다 미니패키지
                 p.card-text 알람브라 궁전과 함께 음식을 즐기는 패키지
                 a.btn.btn-primary(href='#') 구경하기
         .card(style='width: 18rem;')
-            img.card-img-top(src='img/trondheim-2074284_640.jpg', alt='노르웨이 트론해잉행집')
+            img.card-img-top(src='/images/trondheim-2074284_640.jpg', alt='노르웨이 트론해잉행집')
             .card-body
                 h5.card-title 노르웨이 셀카패키지
                 p.card-text 노르웨이의 사진명소를 도는 패키지

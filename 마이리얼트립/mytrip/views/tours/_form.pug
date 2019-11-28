@@ -1,0 +1,26 @@
+.form-group
+  label(for="title") 주제
+  input.form-control(type="text", name="title", placeholder="여행주제를 입력하시오", value=tour.title)
+.form-group
+  label(for="tour_content") 여행계획
+  textarea.form-control(name="content", rows="5" placeholder="여행계획을 입력하시오")= tour.content
+.form-group
+  label(for="day") 기간
+  input.form-control(type="number", name="day", placeholder="여행기간을 입력하시오", value=tour.day)
+.form-group
+  label(for="number_of_people") 총인원수
+  input.form-control(type="number", name="number_of_people", placeholder="총인원수를 입력하시오", value=tour.number_of_people)
+.form-group
+  label(for="price") 1인당 가격
+  input.form-control(type="number", name="price", placeholder="1인당 가격을 입력하시오", value=tour.price)
+.form-group
+  label(for="country") 나라
+  input.form-control(type="text", name="country", placeholder="여행 국가를 입력하시오", value=tour.country)
+.form-group
+  label(for="city") 도시
+  input.form-control(type="text", name="city", placeholder="여행 국가에서 방문하는 도시를 입력하시오", value=tour.city)
+  
+
+
+
+
