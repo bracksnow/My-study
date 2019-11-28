@@ -51,6 +51,11 @@ router.get('/new', (req, res, next) => {
   res.render('users/new', {messages: req.flash()});
 });
 
+router.get('/guide_new', (req, res, next) => {
+  res.render('users/guide_new', {messages: req.flash()});
+});
+
+
 router.get('/:id/edit', needAuth, catchErrors(async (req, res, next) => {
   const user = await User.findById(req.params.id);
   res.render('users/edit', {user: user});
@@ -76,6 +81,7 @@ router.put('/:id', needAuth, catchErrors(async (req, res, next) => {
 
   user.name = req.body.name;
   user.email = req.body.email;
+  user.guideNum = req.body.guideNum;
   if (req.body.password) {
     user.password = await user.generateHash(req.body.password);
   }
@@ -110,6 +116,7 @@ router.post('/', catchErrors(async (req, res, next) => {
   user = new User({
     name: req.body.name,
     email: req.body.email,
+    guideNum:req.body.guideNum
   });
   user.password = await user.generateHash(req.body.password);
   await user.save();
