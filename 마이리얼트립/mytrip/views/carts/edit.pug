@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  .container
+    h1.main-title #{cart.title} 변경하기
+    form(action=`/carts/${cart.id}`, method="POST")
+        input(type="hidden", name="_method", value="PUT")
+        |  상품명
+        input#title(type='text',name = 'title',value = cart.title,readonly='')      
+        |  가격
+        input#num1(type='text',name = 'price',value = cart.price,readonly='')
+        |  인원
+        input#num2(type='text',name = 'numpeople')
+        |  총가격 
+        input#answer(type='text',name = 'totalprice',readonly='')
+        button.btn.btn-secondary(onclick='calculate()') 계산하기
+        |
+        button.btn.btn-secondary(type="submit") 예약하기
+    
+    script(type='text/javascript').
+        function calculate(){
+            var num1, num2, result;
+            num1 = document.getElementById("num1").value;
+            num2 = document.getElementById("num2").value;
+            result = parseFloat(num1)*parseFloat(num2);
+            if(!isNaN(result)){
+            document.getElementById("answer").value = result;
+        }
+      }
