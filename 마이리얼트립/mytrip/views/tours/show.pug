@@ -3,28 +3,49 @@ extends ../layout
 block content
   .container
     h1.main-title= tour.title
-
+    p.content= tour.content
     .tour.show
-      
-
-      .buttons
-        button.btn.btn-primary #[i.fa.fa-thumbs-up] Like
         if currentUser && tour.author.id == currentUser.id
           | 
           a.btn.btn-outline-secondary(href=`/tours/${tour.id}/edit`) Edit
           | 
           a.btn.btn-outline-danger.need-confirm-btn(href=`/tours/${tour.id}?_method=delete`) Delete
-      
+    .container(style="background-color:lightgrey;")
+      h4 예약하기
+      form(action=`#`, method='POST')
+      |  상품명
+      input#title(type='text',name = 'title',value = tour.title,readonly='')      
+      |  가격
+      input#num1(type='text',name = 'price',value = tour.price,readonly='')
+      |  인원
+      input#num2(type='text',name = 'numpeople')
+      |  총가격 
+      input#answer(type='text',name = totalprice,readonly='')
+      button.btn.btn-secondary(onclick='calculate()') 계산하기
+          button.btn.btn-secondary(type="submit") 예약하기
+
+    script(type='text/javascript').
+      function calculate(){
+        var num1, num2, result;
+        num1 = document.getElementById("num1").value;
+        num2 = document.getElementById("num2").value;
+        result = parseFloat(num1)*parseFloat(num2);
+        if(!isNaN(result)){
+          document.getElementById("answer").value = result;
+        }
+      }
+
+  
     if tour.numAnswers > 0
       hr
-      h3 #{tour.numAnswers} Answer(s)
+      h3 후기
       .answers.show
         each answer in answers
-          //include _answer
+          include _answer
 
-    form(action=`/tours/${tour.id}/answers`, method='POST')
+    form(action=``, method='POST')
       .form-group
-        label(for='answer') Your Answer
+        label(for='answer') 후기 등록
         textarea.form-control(name="content", rows="5")
-      button.btn.btn-primary(type="submit") Post Your Answer
+      button.btn.btn-primary(type="submit") 후기등록하기
 

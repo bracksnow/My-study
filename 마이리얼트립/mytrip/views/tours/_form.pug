@@ -5,6 +5,9 @@
   label(for="tour_content") 여행계획
   textarea.form-control(name="content", rows="5" placeholder="여행계획을 입력하시오")= tour.content
 .form-group
+  label(for="tour_content") 여행날짜
+  textarea.form-control(name="date", rows="5" placeholder="여행날짜를 yyyy/mm/dd/의 형식으로 입력하시오")= tour.content
+.form-group
   label(for="day") 기간
   input.form-control(type="number", name="day", placeholder="여행기간을 입력하시오", value=tour.day)
 .form-group
