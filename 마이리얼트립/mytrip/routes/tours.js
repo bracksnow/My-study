@@ -14,7 +14,6 @@ function needAuth(req, res, next) {
   }
 }
 
-/* GET questions listing. */
 router.get('/', catchErrors(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 10;
@@ -83,7 +82,8 @@ router.post('/', needAuth, catchErrors(async (req, res, next) => {
     day: req.body.day,
     city:req.body.city,
     country:req.body.country,
-    number_of_pepple:req.body.number_of_people
+    number_of_people:req.body.number_of_people,
+    course:req.body.course
   });
   await tour.save();
   req.flash('success', 'Successfully posted');

@@ -1,0 +1,13 @@
+.content= tour.content
+.row
+  .col-sm
+    .numbers.
+      #[span.number.num-likes= tour.numLikes] likes,
+      #[span.number.num-answers= tour.numAnswers] answers,
+      #[span.number.num-reads= tour.numReads] reads
+  .col-sm
+    .author
+      | asked on #{moment(tour.createdAt).format('YYYY-MM-DD')}
+      if tour.author
+        | 
+        | by #[a(href=`/users/${tour.author.id}`)= tour.author.name] 

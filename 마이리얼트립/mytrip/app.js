@@ -13,9 +13,9 @@ var passport = require('passport');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-//var questions = require('./routes/questions');
+var tours = require('./routes/tours');
+var carts = require('./routes/carts');
 
-//passport파일을 의미함
 var passportConfig = require('./lib/passport-config');
 
 var app = express();
@@ -36,7 +36,7 @@ app.locals.querystring = require('querystring');
 //=======================================================
 mongoose.Promise = global.Promise; // ES6 Native Promise를 mongoose에서 사용한다.
 // 아래는 mLab을 사용하는 경우의 예: 본인의 접속 String으로 바꾸세요.
-const connStr = "mongodb+srv://ktom97:<password>@cluster0-9efrr.mongodb.net/test?retryWrites=true&w=majority";
+const connStr = "mongodb+srv://ktom97:973p49x1@cluster0-9efrr.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(connStr, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 mongoose.connection.on('error', console.error);
 
@@ -85,8 +85,10 @@ app.use(function(req, res, next) {
 // Route
 app.use('/', index);
 app.use('/users', users);
-//app.use('/questions', questions);
+app.use('/tours', tours);
+app.use('/carts', carts);
 require('./routes/auth')(app, passport);
+app.use('/api', require('./routes/api'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

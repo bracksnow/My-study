@@ -16,6 +16,7 @@ var schema = new Schema({
   numLikes: {type: Number, default: 0},
   numAnswers: {type: Number, default: 0},
   numReads: {type: Number, default: 0},
+  course:{type:String, trim:true}
 }, {
   toJSON: { virtuals: true},
   toObject: {virtuals: true}

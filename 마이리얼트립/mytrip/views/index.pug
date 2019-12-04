@@ -8,22 +8,35 @@ block content
                 .col-md-auto
                     h2.text-white(style='text-align: center;')
                         b 어디로 떠나세요?
-                    form(action='/questions', method='GET')
+                    form(action='/tours', method='GET')
                         .form-group.mb-4
                             input.form-control.border-primary(type='search', placeholder='여행지나 상품을 검색해보세요', aria-describedby='button-addon', name='term',value = term)
-    .slideshow
-        img.active(src='/images/001.jpg', alt='프랑수')
-        img(src='/images/002.jpg', alt='독일')
-        img(src='/images/003.jpg', alt='헝가리')
-        img(src='/images/004.jpg', alt='스위스')
-        img(src='/images/005.jpg', alt='아일랜드')
-    .indicator
-        ul
-            li.active
-            li
-            li
-            li
-            li
+    #carouselExampleIndicators.carousel.slide(data-ride='carousel',style='padding: 2% 4% 2% 4%;')
+        ol.carousel-indicators
+            li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+            li(data-target='#carouselExampleIndicators', data-slide-to='1')
+            li(data-target='#carouselExampleIndicators', data-slide-to='2')
+            li(data-target='#carouselExampleIndicators', data-slide-to='3')
+            li(data-target='#carouselExampleIndicators', data-slide-to='4')
+        .carousel-inner
+            .carousel-item.active
+                img.d-block.w-100(src='/images/001.jpg', alt='...')
+            .carousel-item
+                img.d-block.w-100(src='/images/002.jpg', alt='...')
+            .carousel-item
+                img.d-block.w-100(src='/images/003.jpg', alt='...')
+            .carousel-item
+                img.d-block.w-100(src='/images/004.jpg', alt='...')
+            .carousel-item
+                img.d-block.w-100(src='/images/005.jpg', alt='...')
+        a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+        a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+
+
     h4(style='padding: 0 4%;')
         b 진짜 가이드의 추천패키지
     .card-deck.mt-5(style='padding: 0 4%;')

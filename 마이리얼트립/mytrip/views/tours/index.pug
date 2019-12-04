@@ -7,7 +7,6 @@ block content
     h2.main-title(style='text-align: center;') 여행지 전체
     form.form-inline.search-input-group(action='/tours', method='GET')
       input.form-control.mr-sm-2(type='text', name='term', placeholder='Search', aria-label='Search', value=term,style = 'margin: 0 auto ;')
-
     if tours.total <= 0 
       .alert.alert-info 여행 상품이 없거나 검색결과가 없습니다
     else
@@ -22,8 +21,7 @@ block content
                     .card-body
                         a.title(href=`/tours/${tour.id}`,style='color: black;text-decoration: none;')= tour.title
                         br
-                        a.title(href=`/tours/${tour.id}`, style='pointer-events: none;color: black;text-decoration: none;')= tour.content
-
+                        include _tour
 
 
       +paginate(tours, '/tours', query)

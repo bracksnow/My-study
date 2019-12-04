@@ -8,7 +8,7 @@ header
         a.btn.btn-primary(href='/users/new', role='button') 회원가입
       else
         a.btn.btn-primary(href='/signin', role='button') 위시리스트
-        a.btn.btn-primary(href='/users/new', role='button') 예약내역
+        a.btn.btn-primary(href='/carts', role='button') 예약내역
         .dropdown
           a#dropdownMenuLink.btn.btn-primary.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
             | 더보기
@@ -24,7 +24,4 @@ header
               
   nav.navbar.navbar-dark.bg-primary(style='padding: 0 4%;')
     form.form-inline
-      a.btn.btn-primary(href=`/tours/tour?q={'day<4'}`, role='button') 단기여행
-      a.btn.btn-primary(href='/tours', role='button') 중기여행
-      a.btn.btn-primary(href='/tours', role='button') 장기여행
-      a.btn.btn-primary(href="/tours", role='button') 여행지 전체
+      a.btn.btn-primary(href="/tours", role='button') 여행지 알아보기

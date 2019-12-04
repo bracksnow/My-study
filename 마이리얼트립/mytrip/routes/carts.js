@@ -12,7 +12,6 @@ function needAuth(req, res, next) {
   }
 }
 
-/* GET questions listing. */
 router.get('/', catchErrors(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 10;
