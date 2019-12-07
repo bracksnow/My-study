@@ -3,7 +3,7 @@ extends ../layout
 block content
   .container
     h1.main-title 새로운 여행 등록하기
-    form(action="/tours", method="POST")
+    form(action="/tours", method="POST",enctype="multipart/form-data")
       include _form
       button.btn.btn-outline-primary(type="submit") 등록하기
 

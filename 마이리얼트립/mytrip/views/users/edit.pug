@@ -2,7 +2,7 @@ extends ../layout
 
 block content
     section(style='padding:0.4% 0.4% 0.4% 0.4%;')
-      h1(style='padding: 0 4%;') 내 프로필 수정
+      h1(style='padding: 0 4%;') 프로필 수정
       form(action=`/users/${user._id}?_method=PUT`, method='POST', style='padding: 0 4%;')
         .form-group
           label(for='name') 이름
@@ -19,6 +19,13 @@ block content
         .form-group
           label(for='password_confirmation') 비밀번호 확인
           input.form-control(type='password', id='password_confirmation', name='password_confirmation', placeholder='새 비밀번호 확인')
+        .form-group
+          label(for='level') 권한설정
+          select.form-control(type = 'number', name = 'level', id = 'level')
+            option 1
+            option 2 
+            option 3
+
         a.btn.btn-outline-secondary(href='javascript:window.history.back();') Back 
         | 
         button.btn.btn-primary(type='submit') 수정하기

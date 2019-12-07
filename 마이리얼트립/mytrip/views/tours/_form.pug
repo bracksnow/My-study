@@ -3,16 +3,13 @@
   input.form-control(type="text", name="title", placeholder="여행주제를 입력하시오", value=tour.title)
 .form-group
   label(for="tour_content") 여행계획
-  textarea.form-control(name="content", rows="5" placeholder="여행계획을 입력하시오")= tour.content
+  textarea#ckeditor(name='content')=tour.content
 .form-group
-  label(for="tour_content") 여행날짜
-  textarea.form-control(name="date", rows="5" placeholder="여행날짜를 yyyy/mm/dd/의 형식으로 입력하시오")= tour.content
+  label(for="date") 여행날짜
+  input.form-control(type = 'date',name="date", placeholder="여행날짜를 yyyy/mm/dd/의 형식으로 입력하시오", value = tour.date)
 .form-group
   label(for="day") 기간
   input.form-control(type="number", name="day", placeholder="여행기간을 입력하시오", value=tour.day)
-.form-group
-  label(for="number_of_people") 총인원수
-  input.form-control(type="number", name="number_of_people", placeholder="총인원수를 입력하시오", value=tour.number_of_people)
 .form-group
   label(for="price") 1인당 가격
   input.form-control(type="number", name="price", placeholder="1인당 가격을 입력하시오", value=tour.price)
@@ -23,9 +20,12 @@
   label(for="city") 도시
   input.form-control(type="text", name="city", placeholder="여행 국가에서 방문하는 도시를 입력하시오", value=tour.city)
 .form-group
+  label(for='img') 사진
+  input.form-control(type="file", name="img")
+.form-group
   label(for="course") 여행코스
   input#city(type='text', placeholder='도시')
-  input#place(type='text', placeholder='여행코스')
+  input#place(type='text', placeholder='여행코스', value = tour.course)
   input.add-row(type='button', value='Add Row')
   table
     thead
@@ -54,6 +54,15 @@
     $(this).parents("tr").remove();}
     });
     });
+    });
+  
+  script(type='text/javascript').
+    BasicEditor
+    .create(document.querySelector('#ckeditor'), {
+    language: 'ko',
+    })
+    .catch(error => {
+    console.error(error);
     });
 
 

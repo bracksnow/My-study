@@ -3,7 +3,6 @@ header
     a.navbar-brand.mb-0.h1(href='/') mytrip
     form.form-inline
       if (!currentUser)
-        a.btn.btn-primary(href='/users/guide_new', role='button') 파트너 등록하기
         a.btn.btn-primary(href='/signin', role='button') 로그인
         a.btn.btn-primary(href='/users/new', role='button') 회원가입
       else
@@ -13,13 +12,23 @@ header
           a#dropdownMenuLink.btn.btn-primary.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
             | 더보기
           .dropdown-menu(aria-labelledby='dropdownMenuLink')
-            if (currentUser.guideNum)
+            if (currentUser.level==0 || currentUser.level==1)
               a.dropdown-item(href=`/users/${currentUser._id}/edit`) 프로필 관리
+              a.dropdown-item(href="/users") 계정관리
+              a.dropdown-item(href="/tours") 상품관리
               a.dropdown-item(href=`/tours/new`) 상품등록하기
+              a.dropdown-item(href='/carts') 예약관리
               a.dropdown-item(href='/signout') 로그아웃
-            else
+            else if (currentUser.level==2)
+              a.dropdown-item(href=`/users/${currentUser._id}/edit`) 프로필 관리
+              a.dropdown-item(href="/tours") 상품관리
+              a.dropdown-item(href=`/tours/new`) 상품등록하기
+              a.dropdown-item(href='/carts') 예약관리
+              a.dropdown-item(href='/signout') 로그아웃
+            else if (currentUser.level==3)
               a.dropdown-item(href=`/users/${currentUser._id}/edit`) 프로필 관리
               a.dropdown-item(href='/signout') 로그아웃
+
 
               
   nav.navbar.navbar-dark.bg-primary(style='padding: 0 4%;')

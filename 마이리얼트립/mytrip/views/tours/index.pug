@@ -21,8 +21,11 @@ block content
                     .card-body
                         a.title(href=`/tours/${tour.id}`,style='color: black;text-decoration: none;')= tour.title
                         br
-                        include _tour
+                        p.content=tour.content
+                        br
+                        p #[span.number.num-likes= tour.numLikes] likes
+                        p by #[a(href=`/users/${tour.author.id}`)= tour.author.name] 
 
 
-      +paginate(tours, '/tours', query)
+        +paginate(tours, '/tours', query)
 

@@ -7,16 +7,16 @@ var schema = new Schema({
   title: {type: String, trim: true, required: true},
   content: {type: String, trim: true, required: true},
   price:{type:Number, default:0, required:true, min:0},
-  date:{type:Date, required:true},
+  date:{type:Date},
   day:{type:Number, default:0, required:true,min:0},
   country:{type:String, required:true},
   city:{type:String, required:true},
-  number_of_people:{type:Number,default:0, required:true},
   createdAt: {type: Date, default: Date.now},
   numLikes: {type: Number, default: 0},
   numAnswers: {type: Number, default: 0},
   numReads: {type: Number, default: 0},
-  course:{type:String, trim:true}
+  img: {type: String}, 
+  course:[String]
 }, {
   toJSON: { virtuals: true},
   toObject: {virtuals: true}

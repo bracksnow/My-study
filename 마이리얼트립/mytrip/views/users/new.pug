@@ -5,6 +5,12 @@ block content
     .card
         article.card-body
             h4.card-title.mb-4.mt-1 회원가입
+            p
+                a.btn.btn-block.btn-outline-primary(href='/auth/facebook')
+                    i.fab.fa-facebook-f
+                    | 페이스북으로 회원가입
+
+            hr
             form.form-signup(action='/users', method='POST')
                 .form-group
                     input.form-control(type='text', id='name', name='name', placeholder='성명')

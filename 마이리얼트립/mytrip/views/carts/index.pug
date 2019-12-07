@@ -22,9 +22,20 @@ block content
                             p 예약인원:#{cart.numpeople}
                             p 예약금액:#{cart.totalprice}
                             a.btn.btn-outline-danger.need-confirm-btn(href=`/carts/${cart.id}?_method=delete`) Delete
+          else if (currnetUser==1 || currentUser==0|| currnetUser==2)
+            .cart(style='padding:0.4% 30% 0.4% 30%;')
+              .card.mb-3(style='max-width: 540px;')
+                  .row.no-gutters
+                    .col-md-4
+                        img.card-img(src='...', alt='...')
+                    .col-md-8
+                        .card-body
+                            p 여행상품:#{cart.title}
+                            p 예약인원:#{cart.numpeople}
+                            p 예약금액:#{cart.totalprice}
+                            a.btn.btn-outline-danger.need-confirm-btn(href=`/carts/${cart.id}?_method=delete`) Delete
 
-          else
-            .alert.alert-info 예약한 상품이 없습니다
+
 
 
       +paginate(carts, '/carts', query)

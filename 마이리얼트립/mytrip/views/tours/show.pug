@@ -5,12 +5,13 @@ block content
     h1.main-title= tour.title
 
     .tour.show
+      if tour.img
+        img.img-fluid(src= tour.img)
       include _tour
 
       .buttons
         if currentUser
           button.btn.btn-primary.tour-like-btn(data-id=tour.id) 
-            span.for-loading #[i.fa.fa-spin.fa-refresh] Loading
             span #[i.fa.fa-thumbs-up] Like
           if tour.author && tour.author.id == currentUser.id
             | 
