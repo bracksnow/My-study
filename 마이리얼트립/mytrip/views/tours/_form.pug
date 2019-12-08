@@ -3,7 +3,7 @@
   input.form-control(type="text", name="title", placeholder="여행주제를 입력하시오", value=tour.title)
 .form-group
   label(for="tour_content") 여행계획
-  textarea#ckeditor(name='content')=tour.content
+  textarea#editor1(name='content', rows='10', cols='80')=tour.content
 .form-group
   label(for="date") 여행날짜
   input.form-control(type = 'date',name="date", placeholder="여행날짜를 yyyy/mm/dd/의 형식으로 입력하시오", value = tour.date)
@@ -22,48 +22,34 @@
 .form-group
   label(for='img') 사진
   input.form-control(type="file", name="img")
-.form-group
-  label(for="course") 여행코스
-  input#city(type='text', placeholder='도시')
-  input#place(type='text', placeholder='여행코스', value = tour.course)
-  input.add-row(type='button', value='Add Row')
-  table
-    thead
-      tr
-        th 선택
-        th 도시
-        th 여행코스
-    tbody
-      tr
-        td
-          input(type='checkbox', name='record')
 
-  button.delete-row(type='button') Delete Row
+.form-group
+  label(for='course') 여행코스
+  .buttons
+    input(type='text', name='course')
+    input.btnAdd(type='button', value='Add')
+    br
+
   
   script(type='text/javascript').
-    $(document).ready(function(){
-    $(".add-row").click(function(){
-    var name = $("#city").val();
-    var email = $("#place").val();
-    var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
-    $("table tbody").append(markup);
+    $(document).ready (function () {
+    $('.btnAdd').click (function () {
+    $('.buttons').append (
+    '<input type="text" name="course"> <input type="button" class="btnRemove" value="Remove"><br>'
+    );
+    $('.btnRemove').on('click', function () {
+    $(this).prev().remove ();
+    $(this).next ().remove (); 
+    $(this).remove (); 
     });
-    $(".delete-row").click(function(){
-    $("table tbody").find('input[name="record"]').each(function(){
-    if($(this).is(":checked")){
-    $(this).parents("tr").remove();}
-    });
-    });
-    });
-  
+    }); 
+    }); 
+
   script(type='text/javascript').
-    BasicEditor
-    .create(document.querySelector('#ckeditor'), {
-    language: 'ko',
-    })
-    .catch(error => {
-    console.error(error);
-    });
+    CKEDITOR.config.autoParagraph = false
+    CKEDITOR.config.htmlEncodeOutput = false;
+    CKEDITOR.config.entities = false;
+    CKEDITOR.replace( 'editor1');
 
 
 
