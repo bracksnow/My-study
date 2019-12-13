@@ -20,10 +20,6 @@
   label(for="city") 도시
   input.form-control(type="text", name="city", placeholder="여행 국가에서 방문하는 도시를 입력하시오", value=tour.city)
 .form-group
-  label(for='img') 사진
-  input.form-control(type="file", name="img")
-
-.form-group
   label(for='course') 여행코스
   .buttons
     input(type='text', name='course')
@@ -46,7 +42,8 @@
     }); 
 
   script(type='text/javascript').
-    CKEDITOR.config.autoParagraph = false
+    CKEDITOR.config.autoParagraph = false;
+    CKEDITOR.config.enterMode = CKEDITOR.ENTER_BR;
     CKEDITOR.config.htmlEncodeOutput = false;
     CKEDITOR.config.entities = false;
     CKEDITOR.replace( 'editor1');

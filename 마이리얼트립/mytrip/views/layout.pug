@@ -12,15 +12,14 @@ html
     script(src='/javascripts/application.js')
     script(src='/javascripts/bootstrap-notify.js')
     script(src='//cdn.ckeditor.com/4.13.0/basic/ckeditor.js')
-
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='/javascripts/application.js')
-
     script(src='/socket.io/socket.io.js')     
 
   body
     block top-nav
       include ./includes/topnav
+
     block hero-unit
     if flashMessages
       each texts, type in flashMessages
@@ -30,7 +29,9 @@ html
               | #{msg} 
             button.close(type='button', data-dismiss='alert', aria-label='close')
               span(aria-hidden='true') &times;
+
     block content
+
 
     block footer
       include ./includes/footer

@@ -19,23 +19,23 @@ function validateForm(form, options) {
   email = email.trim();
 
   if (!name) {
-    return 'Name is required.';
+    return '이름을 입력하시오';
   }
 
   if (!email) {
-    return 'Email is required.';
+    return '이메일을 입력하시오';
   }
 
-  if (!form.password && options.needPassword) {
-    return 'Password is required.';
+  if (!form.password) {
+    return '비밀번호를 입력하시오';
   }
 
   if (form.password !== form.password_confirmation) {
-    return 'Passsword do not match.';
+    return '비밀번호가 맞지 않습니다';
   }
 
   if (form.password.length < 6) {
-    return 'Password must be at least 6 characters.';
+    return '비밀번호를 6자리 이상 입력하시오';
   }
 
   return null;
@@ -81,7 +81,8 @@ router.put('/:id', needAuth, catchErrors(async (req, res, next) => {
 
   user.name = req.body.name;
   user.email = req.body.email;
-  user.guideNum = req.body.guideNum;
+  user.level=req.body.level;
+  user.content = req.body.content;
   if (req.body.password) {
     user.password = await user.generateHash(req.body.password);
   }
@@ -115,8 +116,7 @@ router.post('/', catchErrors(async (req, res, next) => {
   }
   user = new User({
     name: req.body.name,
-    email: req.body.email,
-    guideNum:req.body.guideNum
+    email: req.body.email
   });
   user.password = await user.generateHash(req.body.password);
   await user.save();

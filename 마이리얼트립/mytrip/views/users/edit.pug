@@ -22,12 +22,13 @@ block content
         .form-group
           label(for="for me") 나에 대해서
           textarea#editor2(name='content', rows='10', cols='80')=user.content
-        .form-group
-          label(for='level') 권한설정
-          select.form-control(type = 'number', name = 'level', id = 'level')
-            option 1
-            option 2 
-            option 3
+        if currentUser.level==1
+          .form-group
+            label(for='level') 권한설정
+            select.form-control(type = 'number', name = 'level', id = 'level')
+              option 1
+              option 2 
+              option 3
 
         a.btn.btn-outline-secondary(href='javascript:window.history.back();') Back 
         | 

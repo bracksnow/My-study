@@ -33,14 +33,13 @@ router.post('', catchErrors(async (req, res, next) => {
     day: req.body.day,
     city:req.body.city,
     country:req.body.country,
-    number_of_people:req.body.number_of_people
   });
   await tour.save();
   res.json(tour);
 }));
 
 // Put
-router.put('/:id', catchErrors(async (req, res, next) => {
+router.post('/:id', catchErrors(async (req, res, next) => {
   const tour = await Tour.findById(req.params.id);
   if (!tour) {
     return next({status: 404, msg: 'Not exist tour'});

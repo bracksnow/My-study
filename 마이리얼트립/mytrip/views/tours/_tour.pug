@@ -1,8 +1,18 @@
 .row 
   .col-lm
+    h6 상세소개
     .content= tour.content
+br
+br
 .row
   .col-lm
-    .author
-      if tour.author
-        | #[span.number.num-likes= tour.numLikes] likes/ 가이드: #[a(href=`/users/${tour.author.id}`)= tour.author.name] 
+    h6 코스소개
+    -for(i=0;i<tour.course.length;i++)
+      p=tour.course[i]
+      p ↓
+hr
+.row
+  .col-lm
+    if tour.author
+      | #[span.number.num-likes= tour.numLikes] likes/ 가이드: #[a(href=`/users/${tour.author.id}`)= tour.author.name] 
+

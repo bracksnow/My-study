@@ -18,6 +18,10 @@ block content
             a.btn.btn-outline-secondary(href=`/tours/${tour.id}/edit`) Edit
             | 
             a.btn.btn-outline-danger.need-confirm-btn(href=`/tours/${tour.id}?_method=delete`) Delete
+          else if currentUser.level==1 || currentUser.level==2
+            a.btn.btn-outline-secondary(href=`/tours/${tour.id}/edit`) Edit
+            | 
+            a.btn.btn-outline-danger.need-confirm-btn(href=`/tours/${tour.id}?_method=delete`) Delete
       
     .container(style="background-color:lightgrey;")
       h4 예약하기
