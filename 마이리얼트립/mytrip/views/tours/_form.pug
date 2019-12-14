@@ -42,10 +42,13 @@
     }); 
 
   script(type='text/javascript').
+    CKEDITOR.config.language = 'ko';
     CKEDITOR.config.autoParagraph = false;
     CKEDITOR.config.enterMode = CKEDITOR.ENTER_BR;
     CKEDITOR.config.htmlEncodeOutput = false;
     CKEDITOR.config.entities = false;
+    CKEDITOR.config.shiftEnterMode = CKEDITOR.ENTER_P;
+    CKEDITOR.config.disallowedContent = 'br';
     CKEDITOR.replace( 'editor1');
 
 

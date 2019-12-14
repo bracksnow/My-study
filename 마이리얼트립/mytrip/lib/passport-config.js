@@ -1,5 +1,6 @@
 const LocalStrategy = require('passport-local').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
+const NaverStrategy = require('passport-naver').Strategy;
 const User = require('../models/user');
 
 module.exports = function(passport) {
@@ -32,7 +33,7 @@ module.exports = function(passport) {
     clientID : '1192740410927982',
     clientSecret : '180d448ae3f3a762e63adc91a22a440f',
     //클라이언트 아이디와 클라이언트 시크릿은 페이스북 개발자 계정에서 받아서 입력을 해야한다
-    callbackURL : 'http://localhost:3000/auth/facebook/callback',//이 줄은 변경할 것 없음 나중에 localhost부분은 바꿔야함
+    callbackURL : 'https://mytriprsvd.herokuapp.com/auth/facebook/callback',//이 줄은 변경할 것 없음 나중에 localhost부분은 바꿔야함
     profileFields : ['email', 'name', 'picture']//이메일, 이름, 사진을 받는 것이고 추가를 해도 되지만 왠만하면 하지 않는 것이 좋음
   }, async (token, refreshToken, profile, done) => {//token, refreshtoken은 공유하기 버튼을 눌렀을 때 사용하는 것
     console.log('Facebook', profile); // profile 정보로 뭐가 넘어오나 보자.

@@ -10,6 +10,7 @@ var methodOverride = require('method-override');
 var flash = require('connect-flash');
 var mongoose   = require('mongoose');
 var passport = require('passport');
+var passportSocketIo = require('passport.socketio');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -18,15 +19,13 @@ var carts = require('./routes/carts');
 
 var passportConfig = require('./lib/passport-config');
 
-var app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-if (app.get('env') === 'development') {
-  app.locals.pretty = true;
-}
-
+module.exports = (app, io) => {
+  // view engine setup
+  app.set('views', path.join(__dirname, 'views'));
+  app.set('view engine', 'pug');
+  if (app.get('env') === 'development') {
+    app.locals.pretty = true;
+  }
 // Pug의 local에 moment라이브러리와 querystring 라이브러리를 사용할 수 있도록.
 app.locals.moment = require('moment');
 app.locals.querystring = require('querystring');
@@ -59,11 +58,24 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 
+const sessionStore = new session.MemoryStore();
+const sessionId = 'mytrip.sid';
+const sessionSecret =  'TODO: change this secret string for your own'
 // session을 사용할 수 있도록.
 app.use(session({
+  name: sessionId,
   resave: true,
   saveUninitialized: true,
-  secret: 'long-long-long-secret-string-1313513tefgwdsvbjkvasd'
+  store: sessionStore,
+  secret: sessionSecret
+}));
+
+app.use(session({
+  name: sessionId,
+  resave: true,
+  saveUninitialized: true,
+  store: sessionStore,
+  secret: sessionSecret
 }));
 
 app.use(flash()); // flash message를 사용할 수 있도록
@@ -82,11 +94,43 @@ app.use(function(req, res, next) {
   next();
 });
 
+// Socket에서도 Passport로 로그인한 정보를 볼 수 있도록 함.
+io.use(passportSocketIo.authorize({
+  cookieParser: cookieParser,       // the same middleware you registrer in express
+  key:          sessionId,       // the name of the cookie where express/connect stores its session_id
+  secret:       sessionSecret,    // the session_secret to parse the cookie
+  store:        sessionStore,        // we NEED to use a sessionstore. no memorystore please
+  passport:     passport,
+  success:      (data, accept) => {
+    console.log('successful connection to socket.io');
+    accept(null, true);
+  }, 
+  fail:         (data, message, error, accept) => {
+    // 실패 혹은 로그인 안된 경우
+    console.log('failed connection to socket.io:', message);
+    accept(null, false);
+  }
+}));
+
+
+// connection 요청이 온 경우
+io.on('connection', socket => {
+  console.log('socket connection!');
+  if (socket.request.user.logged_in) {
+    // 로그인이 된 경우에만 join 요청을 받는다.
+    socket.emit('welcome');
+    socket.on('join', data => {
+      // 본인의 ID에 해당하는 채널에 가입시킨다.
+      socket.join(socket.request.user._id.toString());
+    });
+  }
+});
+
 // Route
 app.use('/', index);
 app.use('/users', users);
-app.use('/tours', tours);
 app.use('/carts', carts);
+app.use('/tours', tours(io));
 require('./routes/auth')(app, passport);
 app.use('/api', require('./routes/api'));
 
@@ -108,4 +152,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+return app;
+};
