@@ -1,6 +1,6 @@
 package DataStructure;
 
-public class Soluction_stack_h1 {
+public class Solution_stack_h1 {
     public int[] solution(int[] heights) {
         int len = heights.length;
         int[] answer = new int[len];
