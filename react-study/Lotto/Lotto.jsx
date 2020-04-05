@@ -22,10 +22,10 @@ class Lotto extends Component{
     runtimeouts = () =>{
         const {winNumbers} = this.state;
         for(let i = 0;i<winNumbers.length-1;i++){
-            this.timeout[i] = setTimeout(()=>{
+            this.timeouts[i] = setTimeout(()=>{
                 this.setState((prevState)=>{
                     return{
-                        winBalls:[...prevState,winNumbers[i]];
+                        winBalls:[...prevState,winNumbers[i]]
                     }
                 });
             },(i+1)*1000);
