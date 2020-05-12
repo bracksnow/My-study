@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Start"
+        android:text="선택을 시작하시겠습니까?"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        />
+    <Switch
+        android:id="@+id/Agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시작함"
+        android:paddingLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/Like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="좋아하는 안드로이드 버전은 ?"
+        android:paddingLeft="10dp"
+        android:visibility="invisible" />
+
+    <RadioGroup
+        android:id="@+id/VersionGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/Oreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오레오(8.0)" />
+
+        <RadioButton
+            android:id="@+id/Pie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="파이(9.0)" />
+
+        <RadioButton
+            android:id="@+id/Q"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q(10.0)" />
+    </RadioGroup>
+    <ImageView
+        android:id="@+id/Picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/End"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종료"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"
+        />
+    <Button
+        android:layout_marginLeft="10dp"
+        android:id="@+id/Undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="처음부터"
+        android:visibility="invisible"
+        />
+</LinearLayout>
