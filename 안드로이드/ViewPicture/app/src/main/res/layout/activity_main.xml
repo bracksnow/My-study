@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/Btnstart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" 사진보기 시작 ">
+        </Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Btnend"
+            android:layout_weight="1"
+            android:text=" 사진보기 정지 ">
+        </Button>
+    </LinearLayout>
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewFlipper1">
+        <ImageView
+            android:id="@+id/austria"
+            android:layout_width="wrap_content"
+            android:src="@drawable/flagaustria"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+        </ImageView>
+        <ImageView
+            android:id="@+id/hungary"
+            android:layout_width="wrap_content"
+            android:src="@drawable/flaghungary"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+        </ImageView>
+        <ImageView
+            android:id="@+id/Czech"
+            android:src="@drawable/flagczech"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+        </ImageView>
+        <ImageView
+            android:id="@+id/swenden"
+            android:src="@drawable/flagsweden"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+        </ImageView>
+        <ImageView
+            android:id="@+id/croatia"
+            android:src="@drawable/flagcroatia"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+        </ImageView>
+    </ViewFlipper>
+
+
+
+</LinearLayout>
