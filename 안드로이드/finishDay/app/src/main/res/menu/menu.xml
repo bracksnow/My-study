@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/time"
+        android:title="취침시간"
+        app:showAsAction="always" />
+    <item android:id="@+id/diary"
+        android:title="일기장"
+        app:showAsAction="never" />
+    <item android:id="@+id/recommand"
+        android:title="수면정보"
+        app:showAsAction="never" />
+</menu>
