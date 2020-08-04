@@ -1,0 +1,2 @@
+containers: store 에 접근이 닿는 container 컴포넌트들이 저장된다
+주로 여러 컴포넌트를 감싸는 역할을 한다.
