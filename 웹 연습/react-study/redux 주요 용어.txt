@@ -1,0 +1,5 @@
+리덕스의 주요 개념
+store->리덕스의 state를 모아두는 곳
+action->리덕스의 state를 변경하는 행동
+dispatch->action을 실행하도록 하는 것
+reducer->action의 dispatch가 실행시 어떤 식으로 state가 변경될 지를 정의하는 것
