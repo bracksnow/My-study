@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
     isLoggedIn:false,
     user:{},
 }//초기 state를 만들어준다
@@ -29,5 +29,11 @@ const reducer = (state = initialState, action) =>{
                 ...state, isLoggedIn: false, user:null
             }
         }
+        default:{
+            return{
+                ...state
+            }
+        }
     }
-}
+};
+export default reducer;
