@@ -1,5 +1,13 @@
 export const initialState = {
-    mainPosts:[]
+    mainPosts : [{
+        User : {
+            id : 1,
+            nickname : "Dogveloper",
+        },
+        content : "첫번째 게시글",
+        img : 'https://source.unsplash.com/random',
+    }],
+    imagePaths:[]
 };//초기 state
 const ADD_POST = 'ADD_POST';//액션의 이름
 const ADD_DUMMY = 'ADD_DUMMY';//액션의 이름

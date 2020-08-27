@@ -2,16 +2,16 @@ import React, { useCallback } from 'react';
 import {Input, Form, Button, List} from 'antd';
 import Link from 'next/link';
 import { useInput } from '../pages/signup';
+import {useDispatch} from "react-redux";
+import {loginAction} from '../reducers/user'
 
 const LoginForm = () => {
     const [id , onChangeId] = useInput('');
     const [password , onChangePassword] = useInput('');
+    const dispatch = useDispatch();
     const onSubmitForm = useCallback((e) => {
         e.preventDefault();
-        console.log({
-            id,
-            password
-        })
+        dispatch(loginAction);
     },[id,password]);
     //자식컴포넌트로 넘기는 함수는 무조건 usecallback로 감싸준다
     return (
