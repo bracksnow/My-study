@@ -45,6 +45,6 @@ public class Boj2644 {
                 }
             }
         }
-        System.out.println(checked[two]==0?-1:checked[two]);//삼항연산자 사용, 최종적으로 two변수가 true가 아니면 -1출력
+        System.out.println(checked[two]==0?-1:checked[two]);//삼항연산자 사용, 최종적으로 0이면 -1출력
     }
 }
