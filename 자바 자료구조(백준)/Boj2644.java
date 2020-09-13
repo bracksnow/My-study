@@ -3,6 +3,7 @@ package DataStructure;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -12,8 +13,7 @@ public class Boj2644 {
     static int one, two;//첫번째 사람, 두번째 사람
     static int m;//관계의 수
     static int[][] map;
-    static boolean[] visited;
-    static int count=0;
+    static int[] checked;
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
@@ -23,7 +23,8 @@ public class Boj2644 {
         two = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(bf.readLine());
         map = new int[n+1][n+1];//배열인덱스 처리하기 위해 +1을 함
-        visited = new boolean[n+1];//배열인덱스 처리하기 위해 +1을 함
+        checked = new int[n+1];//배열인덱스 처리하기 위해 +1을 함
+        Arrays.fill(checked,0);
         for(int i = 0;i<m;i++){
             st = new StringTokenizer(bf.readLine());
             int a = Integer.parseInt(st.nextToken());
@@ -36,17 +37,14 @@ public class Boj2644 {
         Queue<Integer> q = new LinkedList<Integer>();
         q.offer(start);
         while(!q.isEmpty()){
-            count++;
             int x = q.poll();
-            //System.out.println(x);
-            visited[x] = true;
-            for(int i = 1;i<=m;i++){
-                if(map[x][i]==1 && !visited[i]){
+            for(int i = 1;i<map.length;i++){//+1을 해주고 인덱스0은 버린 것 주의하기!!
+                if(map[x][i]==1 && checked[i]==0){
                     q.offer(i);
-                    System.out.println(q.size());
+                    checked[i] = checked[x] + 1;
                 }
             }
         }
-        System.out.println(visited[two]==false?-1:count-1);//삼항연산자 사용, 최종적으로 two변수가 true가 아니면 -1출력
+        System.out.println(checked[two]==0?-1:checked[two]);//삼항연산자 사용, 최종적으로 two변수가 true가 아니면 -1출력
     }
 }
