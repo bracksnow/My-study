@@ -11,6 +11,8 @@ export const initialState = {
 
 export const LOG_IN = 'LOG_IN';//액션의 이름->대문자로 적어준다
 export const LOG_OUT = 'LOG_OUT';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE'
 
 export const loginAction = {
     type:LOG_IN,
