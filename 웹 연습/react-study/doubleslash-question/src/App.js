@@ -12,6 +12,7 @@ function App() {
       <Moving className = 'bird_Moving'></Moving>
     </div>
   </div>
+
   );
 }
 
