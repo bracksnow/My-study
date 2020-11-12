@@ -1,0 +1,6 @@
+스칼라를 이용한 wordcount와 실행시간 측정
+val textFile = sc.textFile("hdfs://127.0.0.1:9000/user/ubuntu/2M.ID.CONTENTS")
+val t0 = System.nanoTime()
+val firstword = textFile.flatMap(_.split(" ")).map(_.replaceAll( "[^a-zA-Z\\d]", "").trim.toLowerCase).filter(!_.isEmpty).map(word=>(word.head,1)).reduceByKey(_ + _).sortByKey()
+val t1 = System.nanoTime()
+println("Elapsed time: " + (t1 - t0) + "ns")
