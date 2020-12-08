@@ -6,10 +6,12 @@ import hello.hellomember.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 //@Service - 컴포넌트 방식으로 스프링이 컨트롤러로 지정하기 위해서 필요
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
