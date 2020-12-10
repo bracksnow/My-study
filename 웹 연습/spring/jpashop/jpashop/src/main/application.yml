@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      dda-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+  logging.level:
+    org.hibernate.SQL: debug
+
+#띄어쓰기 2칸으로 계층을 구분하니 주의할 것!!-yml형식의 경우
