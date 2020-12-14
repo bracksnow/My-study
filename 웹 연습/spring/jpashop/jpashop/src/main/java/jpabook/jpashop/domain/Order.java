@@ -38,4 +38,35 @@ public class Order {
         this.delivery = delivery;
         delivery.setOrder(this);
     }
+
+    public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems) {//...파라미터는 동일한 객체의 파라미터가 여러개 들어오는 경우에 사용하는 것
+        Order order = new Order();
+        order.setMember(member);
+        order.setDelivery(delivery);
+        for(OrderItem orderItem:orderItems){
+            order.addOrderItem(orderItem);
+        }
+        order.setStatus(OrderStatus.ORDER);
+        order.setOrderDate(LocalDateTime.now());
+        return order;
+        //order을 생성할 때 한번에 여러 엔터티와 함께 생성
+    }
+    public void cancel(){
+        if(delivery.getStatus()==DeliveryStatus.COMP){
+            if (delivery.getStatus() == DeliveryStatus.COMP) {
+                throw new IllegalStateException("이미 배송완료된 상품은 취소가 불가능합니 다.");
+            }
+            this.setStatus(OrderStatus.CANCEL);
+            for (OrderItem orderItem : orderItems) {
+                orderItem.cancel();
+            }
+        }
+    }
+    public int getTotalPrice() {
+        int totalPrice = 0;
+        for (OrderItem orderItem : orderItems) {
+            totalPrice += orderItem.getTotalPrice();
+        }
+        return totalPrice;
+    }
 }
