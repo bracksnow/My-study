@@ -11,9 +11,9 @@ import java.util.List;
 @Getter @Setter
 public class Member {
 
-    @Id @GeneratedValue
+    @Id
     @Column(name = "member_id")
-    private Long id;//DB에 자동으로 생성되는 기본키 역할
+    private String id;//아이디나 이메일을 입력받는 것을 PK값으로
 
     private String name;//이름
 
@@ -25,8 +25,8 @@ public class Member {
     private Birth birth;//생년월일을 입력
 
     @Enumerated(EnumType.STRING)
-    private Sex sex;//성별은 [남, 여]로 구분
+    private Sex sex;//성별은 [male, female]로 구분
 
-    @OneToMany
+    @OneToMany(mappedBy = "member")//FK값이 가까운 엔터티에 연결
     private List<Post> posts = new ArrayList<>();
 }
