@@ -8,21 +8,24 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
-public class MemberRepository {//취소, 수정 구현해야함
+public class MemberRepository {
 
     @PersistenceContext
     EntityManager em;
 
     public void save(Member member){
-        em.persist(member);
+       em.persist(member);
     }
-    public void findOne(String id){
-        em.find(Member.class, id);
+    public Member findOne(String id){
+        return em.find(Member.class, id);
     }
-    public List<Member> findByName(String name){
-        return em.createQuery("select m from Member m where m.name = :name",Member.class).setParameter("name", name).getResultList();
+    public List<Member> findById(String id){
+        return em.createQuery("select m from Member m where m.id = :id",Member.class).setParameter("id", id).getResultList();
     }
     public List<Member> findAll(){
         return em.createQuery("select m from Member m", Member.class).getResultList();
+    }
+    public void deleteMemberById(String id){
+        em.createQuery("delete m from Member m where m.id = :id", Member.class).setParameter("id", id);
     }
 }
