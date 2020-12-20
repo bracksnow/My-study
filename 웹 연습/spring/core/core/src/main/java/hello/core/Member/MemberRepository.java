@@ -1,7 +1,4 @@
-package Member;
-
-import java.util.HashMap;
-import java.util.Map;
+package hello.core.Member;
 
 public interface MemberRepository {
 
