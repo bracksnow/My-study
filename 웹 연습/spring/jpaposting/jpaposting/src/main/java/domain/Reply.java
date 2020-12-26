@@ -1,0 +1,34 @@
+package domain;
+
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import javax.persistence.*;
+import java.sql.Timestamp;
+
+@Entity
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Reply {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "reply_id")
+    private Long id;
+
+    @Column(nullable = false, length = 100)
+    private String content;
+
+    @ManyToOne(fetch = FetchType.LAZY)//포스트 하나당 댓글은 여러개
+    @JoinColumn(name = "post_id")
+    private Post post;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
+
+    @CreationTimestamp
+    private Timestamp createDate;//생성날짜 - 자동입력됨
+}

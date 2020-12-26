@@ -1,32 +1,41 @@
 package domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Timestamp;
 
 @Entity
 @Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Member {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
-    private String id;//아이디나 이메일을 입력받는 것을 PK값으로
+    private Long id;
 
-    private String name;//이름
+    @Column(nullable = false, length = 30)
+    private String userId;//아이디
 
+    @Column(nullable = false, length = 100)
     private String password;//비밀번호
 
-    private String checkPassword;//비밀번호 확인
+    @Column(nullable = false, length = 30)
+    private String name;//이름
 
-    @Embedded
-    private Birth birth;//생년월일을 입력
+    @Column(nullable = false, length = 50)
+    private String email;//이메일
 
-    @Enumerated(EnumType.STRING)
-    private Sex sex;//성별은 [male, female]로 구분
+    @ColumnDefault("USER")
+    private String role;//관리자, 유저
 
-    @OneToMany(mappedBy = "member")//FK값이 가까운 엔터티에 연결
-    private List<Post> posts = new ArrayList<>();
+    @CreationTimestamp
+    private Timestamp createDate;//생성날짜 - 자동입력됨
+
+
 }
