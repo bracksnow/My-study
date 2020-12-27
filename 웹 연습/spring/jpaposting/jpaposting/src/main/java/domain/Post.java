@@ -6,6 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Getter @Setter
@@ -18,8 +19,8 @@ public class Post {
     @Column(name = "post_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
+    @ManyToOne(fetch = FetchType.LAZY)//왠만하면 지연로딩 사용하기 ->N+1문제 발생
+    @JoinColumn(name = "member_id")//FK값을 의미함
     private Member member;
 
     @Column(nullable = false, length = 100)
@@ -34,9 +35,9 @@ public class Post {
     @ColumnDefault("0")
     private int count;//조회수를 의미
 
+    @OneToMany(mappedBy = "post")//DB에 저장하지 않아야한다는 의미임 DB에 칼럼을 만들지 말라는 것과 동일함
+    private List<Reply> reply;
 
-    /*
-    * 연관관계 메서드
-    * */
+
 
 }

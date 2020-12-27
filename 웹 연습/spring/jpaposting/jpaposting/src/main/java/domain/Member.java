@@ -31,8 +31,8 @@ public class Member {
     @Column(nullable = false, length = 50)
     private String email;//이메일
 
-    @ColumnDefault("USER")
-    private String role;//관리자, 유저
+    @Enumerated(EnumType.STRING)
+    private Role role;//관리자, 유저
 
     @CreationTimestamp
     private Timestamp createDate;//생성날짜 - 자동입력됨
