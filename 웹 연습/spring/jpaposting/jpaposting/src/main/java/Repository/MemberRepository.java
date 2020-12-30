@@ -2,11 +2,10 @@ package Repository;
 
 import domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
+import java.util.List;
 
-@Repository // 생략가능->JpaRepository를 받음으로 생략이 가능해짐
-public interface MemberRepository extends JpaRepository<Member, Integer> {
+public interface MemberRepository extends JpaRepository <Member, Long> {
 
-    
+    public List<Member> findByUserId(String UserId);
 }

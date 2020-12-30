@@ -3,6 +3,7 @@ package domain;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -19,7 +20,7 @@ public class Member {
     @Column(name = "member_id")
     private Long id;
 
-    @Column(nullable = false, length = 30)
+    @Column(unique = true, nullable = false, length = 30)
     private String userId;//아이디
 
     @Column(nullable = false, length = 100)
@@ -35,6 +36,7 @@ public class Member {
     private Role role;//관리자, 유저
 
     @CreationTimestamp
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Timestamp createDate;//생성날짜 - 자동입력됨
 
 
