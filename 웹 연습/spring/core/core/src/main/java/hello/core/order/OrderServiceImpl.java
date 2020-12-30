@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;//인터페이스에만 의존하도록 변경
+    //필드에 의존성 주입은 사용하지 말자!!
 
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
