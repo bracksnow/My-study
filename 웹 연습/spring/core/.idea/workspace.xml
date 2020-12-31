@@ -50,6 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../practice" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RunManager" selected="Gradle.AutowiredTest.AutoWiredOption">
     <configuration name="ApplicationContextSameBeanFindTest.findBeanByName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
