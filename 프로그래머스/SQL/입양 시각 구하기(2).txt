@@ -1,0 +1,2 @@
+select a.hour hour , nvl(b.count,0) count
+from (select level-1 hour from dual connect by level <= 24) a left join (select to_char(datetime , 'HH24') hour , count(*) count from animal_outs group by to_char(datetime, 'HH24')) b on a.hour = b.hour order by hour;
