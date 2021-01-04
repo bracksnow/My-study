@@ -8,4 +8,6 @@ import java.util.List;
 public interface MemberRepository extends JpaRepository <Member, Long> {
 
     public List<Member> findByUserId(String UserId);
+
+    public Member findOneByUserId(String id);
 }
