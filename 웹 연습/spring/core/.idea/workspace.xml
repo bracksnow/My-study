@@ -53,6 +53,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../practice" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="hello.core.web" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.Tests in 'hello.core'">
     <configuration name="AutoAppConfig.basicScan" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>

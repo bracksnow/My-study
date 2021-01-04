@@ -1,0 +1,4 @@
+select O.ANIMAL_ID, O.ANIMAL_TYPE, O.NAME from animal_outs O join animal_ins I
+on O.animal_id = I.animal_id
+where O.sex_upon_outcome in ('Spayed Female', 'Neutered Male')
+and I.sex_upon_intake  in ('Intact Male', 'Intact Female') ORDER BY animal_id
