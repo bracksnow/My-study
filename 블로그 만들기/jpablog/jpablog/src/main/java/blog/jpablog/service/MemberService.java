@@ -4,6 +4,7 @@ package blog.jpablog.service;
 import blog.jpablog.domain.Member;
 import blog.jpablog.domain.Role;
 import blog.jpablog.repository.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,11 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional(readOnly = true)//기본적으로 readonly로 지정됨
+@RequiredArgsConstructor//의존성 주입을 위한 것
 public class MemberService {//회원가입, 회원수정, 회원검색, 회원삭제기능
 
-    @Autowired
-    private MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
 
     private void validateDuplicateMember(Member member){
         List<Member> findMembers = memberRepository.findByUserId(member.getUserId());
@@ -48,11 +48,12 @@ public class MemberService {//회원가입, 회원수정, 회원검색, 회원�
         memberRepository.deleteById(member.getId());
 
     }
-    
+    @Transactional(readOnly = true)
     public Member findone(String userId){//회원찾기
          return memberRepository.findOneByUserId(userId);
     }
 
+    @Transactional(readOnly = true)
     public List<Member> findMembers() {//전체회원 찾기
         return memberRepository.findAll();
     }

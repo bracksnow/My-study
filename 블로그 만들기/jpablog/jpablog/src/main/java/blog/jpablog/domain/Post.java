@@ -28,7 +28,7 @@ public class Post {
     private String title;//주제
 
     @Lob//대용량 데이터를 의미
-    private String text;//본문 텍스트
+    private String content;//본문 텍스트
 
     @CreationTimestamp
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -37,6 +37,8 @@ public class Post {
     @ColumnDefault("0")
     private int count;//조회수를 의미
 
+    
+    //joincolumn과 차이는 단방향이냐 양방향이냐 차이
     @OneToMany(mappedBy = "post")//DB에 저장하지 않아야한다는 의미임 DB에 칼럼을 만들지 말라는 것과 동일함
     private List<Reply> reply;
 
