@@ -38,7 +38,7 @@ public class Post {
     private int count;//조회수를 의미
 
     
-    //joincolumn과 차이는 단방향이냐 양방향이냐 차이
+    //joincolumn과 차이는 단방향이냐 양방향이냐 차이 ->mapped는 FK가 없는 곳에 걸어준다
     @OneToMany(mappedBy = "post")//DB에 저장하지 않아야한다는 의미임 DB에 칼럼을 만들지 말라는 것과 동일함
     private List<Reply> reply;
 
