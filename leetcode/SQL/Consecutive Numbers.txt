@@ -1,0 +1,1 @@
+SELECT Num as ConsecutiveNums FROM Logs GROUP BY Num HAVING COUNT(*)>3
