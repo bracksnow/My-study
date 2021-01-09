@@ -5,9 +5,3 @@ body {
     padding: 3rem 1.5rem;
     text-align: center;
 }
-.main_image {
-    position: relative;
-    left:0px;
-    object-fit: cover;
-    
-}

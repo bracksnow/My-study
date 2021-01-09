@@ -1,5 +1,15 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="starter-template.css" th:href="@{/starter-template.css}" rel="stylesheet">
+    <title>seongu's blog</title>
+</head>     
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment = "menu">
@@ -9,13 +19,13 @@
                 <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">홈<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#" th:href="@{/}">홈<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">게시판</a>
+                            <a class="nav-link" href="#" th:href="@{/board/list}">게시판</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">깃허브</a>
+                            <a class="nav-link" href="#" th:href="@{https://github.com/bracksnow}">깃허브</a>
                         </li>
                     </ul>
                 </div>
@@ -39,9 +49,6 @@
                         <p style="font-size: small;">깃허브 주소: <a class="text-dark" href=https://github.com/bracksnow>https://github.com/bracksnow</a></p>
                     </div>
                 </div>
-            </div>
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                <p class="text-dark">© 2021 Copyright: seongu</p>
             </div>
         </footer>
     </body>
