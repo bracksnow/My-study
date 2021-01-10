@@ -9,9 +9,14 @@
     <header th:replace="fragments/common :: menu">
     </header>
     <section>
-        <main role="main" class="container">
-
-        </main>
+        <div class="card" th:each = "post:${post}">
+            <h5 class="card-header" th:text = "${post.id}">Featured</h5>
+            <div class="card-body">
+                <h5 class="card-title" th:text = "${post.title}">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
     </section>
     <footer th:replace = "fragments/common :: foot">
     </footer>
