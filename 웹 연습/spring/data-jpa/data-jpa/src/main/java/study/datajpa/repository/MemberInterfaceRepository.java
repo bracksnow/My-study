@@ -1,6 +1,10 @@
 package study.datajpa.repository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import study.datajpa.domain.Member;
@@ -43,4 +47,14 @@ public interface MemberInterfaceRepository extends JpaRepository<Member, Long> {
                 .getSingleResult();
     }
     */
+
+
+    Page<Member> findByAge(int age, Pageable pageable);
+    //해당 값을 출력하고 싶을 땐 dto사용하기
+    Slice<Member> sliceFindByAge(int age, Pageable pageable);
+
+    @Modifying
+    @Query("update Member m set m.age = m.age+1 where m.age>=1")
+    int bulkAgePlus(int age);//벌크연산은 영속성 컨텍스트를 무시
+    //벌크연산을 한 뒤에는 영속성 컨텍스트를 날려야한다
 }
