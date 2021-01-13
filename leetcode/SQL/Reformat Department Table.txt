@@ -1,0 +1,16 @@
+select
+id,
+SUM(CASE WHEN month = 'Jan' then revenue end) Jan_Revenue,
+SUM(CASE WHEN month = 'Feb' then revenue end) Feb_Revenue,
+SUM(CASE WHEN month = 'Mar' then revenue end) Mar_Revenue,
+SUM(CASE WHEN month = 'Apr' then revenue end) Apr_Revenue,
+SUM(CASE WHEN month = 'May' then revenue end) May_Revenue,
+SUM(CASE WHEN month = 'Jun' then revenue end) Jun_Revenue,
+SUM(CASE WHEN month = 'Jul' then revenue end) Jul_Revenue,
+SUM(CASE WHEN month = 'Aug' then revenue end) Aug_Revenue,
+SUM(CASE WHEN month = 'Sep' then revenue end) Sep_Revenue,
+SUM(CASE WHEN month = 'Oct' then revenue end) Oct_Revenue,
+SUM(CASE WHEN month = 'Nov' then revenue end) Nov_Revenue,
+SUM(CASE WHEN month = 'Dec' then revenue end) Dec_Revenue
+from Department
+group by id

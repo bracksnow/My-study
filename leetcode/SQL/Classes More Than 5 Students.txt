@@ -1,0 +1,1 @@
+SELECT class FROM courses group BY class HAVING count(class)>=5
