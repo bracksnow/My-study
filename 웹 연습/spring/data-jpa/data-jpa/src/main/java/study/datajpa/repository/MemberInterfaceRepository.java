@@ -3,6 +3,7 @@ package study.datajpa.repository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -57,4 +58,11 @@ public interface MemberInterfaceRepository extends JpaRepository<Member, Long> {
     @Query("update Member m set m.age = m.age+1 where m.age>=1")
     int bulkAgePlus(int age);//벌크연산은 영속성 컨텍스트를 무시
     //벌크연산을 한 뒤에는 영속성 컨텍스트를 날려야한다
+
+
+    @Query("select m from Member m left join fetch m.team")
+    List<Member> findMemberFetchJoin();
+
+    @EntityGraph(attributePaths = {"team"})
+    List<Member> findAll();
 }
