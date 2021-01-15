@@ -13,7 +13,7 @@ import study.datajpa.dto.MemberDto;
 
 import java.util.List;
 
-public interface MemberInterfaceRepository extends JpaRepository<Member, Long> {
+public interface MemberInterfaceRepository extends JpaRepository<Member, Long>, MemberRepositoryCustom {
 
     List<Member> findByUsernameAndAgeGreaterThan(String name, int age);//메서드명으로 쿼리문을 날림->메서드명이 조금이라도 규칙에 맞지 앟으면 안됨
 
