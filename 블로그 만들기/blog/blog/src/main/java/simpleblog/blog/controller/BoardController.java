@@ -40,7 +40,7 @@ public class BoardController {
 
     @PostMapping("/form")
     public String boardSubmit(@Valid Board board, BindingResult bindingResult){
-        if (bindingResult.hasErrors()) {//에러가 있는 경우
+        if (bindingResult.hasErrors()) {//에러가 있는 경우-> ex)Not blank의 메시지 출력
             return "board/form";
         }
         boardRepository.save(board);

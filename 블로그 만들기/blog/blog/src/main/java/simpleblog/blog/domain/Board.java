@@ -15,10 +15,12 @@ public class Board extends DateEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
+    @Column(nullable = false)
     @NotBlank(message = "제목을 입력하세요")
     private String title;
 
+    @Column(nullable = false)
     @NotBlank(message = "내용을 입력하세요")
     private String content;
 
