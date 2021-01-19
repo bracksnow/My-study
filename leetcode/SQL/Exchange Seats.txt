@@ -1,0 +1,4 @@
+select CASE WHEN id=(select MAX(id) FROM seat) AND mod(id,2)=1 THEN ID 
+WHEN MOD(id,2)=0 THEN id-1 
+WHEN MOD(id,2)=1 THEN id+1 END 
+as id, student FROM seat ORDER BY ID
