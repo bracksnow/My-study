@@ -26,5 +26,7 @@ public class User {
     private String password;
 
     @Enumerated(value = EnumType.STRING)
-    private Role role;//이것으로 권한부여 예정 ->enabled는 설정?
+    private Role role;//이것으로 권한부여 예정
+
+    private Boolean enabled;
 }

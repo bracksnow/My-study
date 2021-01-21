@@ -26,11 +26,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/home").permitAll()
+                .antMatchers("/","/css/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login")
+                .loginPage("/account/login")
                 .permitAll()
                 .and()
                 .logout()
@@ -44,11 +44,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .dataSource(dataSource)
                 .passwordEncoder(passwordEncoder())//비밀번호 암호화를 자동으로 함
                 .usersByUsernameQuery("select email,password,enabled "
-                        + "from users "
+                        + "from user "
                         + "where email = ?")
-                .authoritiesByUsernameQuery("select email,authority "
-                        + "from authorities "
-                        + "where email = ?");//권한부여임
+                .authoritiesByUsernameQuery("select email,role "
+                        + "from user "
+                        + "where email = ?");//권한부여임->enum으로 설정해서 단순히 가져오기만?
     }
 
     @Bean
