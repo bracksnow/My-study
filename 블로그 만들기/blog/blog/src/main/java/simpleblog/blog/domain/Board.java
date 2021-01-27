@@ -6,8 +6,7 @@ import lombok.Getter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import java.time.LocalDateTime;
+
 
 @Entity
 @Data
@@ -23,6 +22,10 @@ public class Board extends DateEntity {
     @Column(nullable = false)
     @NotBlank(message = "내용을 입력하세요")
     private String content;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
 
 

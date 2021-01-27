@@ -14,8 +14,6 @@ import simpleblog.blog.domain.Board;
 import simpleblog.blog.repository.BoardRepository;
 
 import javax.validation.Valid;
-import java.util.List;
-import java.util.Optional;
 
 @Controller
 @RequestMapping("/board")
