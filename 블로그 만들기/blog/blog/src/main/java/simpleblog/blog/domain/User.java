@@ -8,7 +8,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import java.util.List;
 
-@Table(name = "user")
 @Entity
 @Data
 public class User {
@@ -28,7 +27,7 @@ public class User {
     @Enumerated(value = EnumType.STRING)
     private Role role;//이것으로 권한부여 예정
 
-    @OneToMany
+    @OneToMany()
     private List<Board> boards;
 
     private Boolean enabled;

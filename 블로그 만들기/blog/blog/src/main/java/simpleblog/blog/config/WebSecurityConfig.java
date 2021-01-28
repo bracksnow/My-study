@@ -39,10 +39,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication()//인증처리
                 .dataSource(dataSource)
                 .passwordEncoder(passwordEncoder())//비밀번호 암호화를 자동으로 함
-                .usersByUsernameQuery("select email,password,enabled "
+                .usersByUsernameQuery("select email, password, enabled "
                         + "from user "
                         + "where email = ?")
-                .authoritiesByUsernameQuery("select email,role "
+                .authoritiesByUsernameQuery("select email, role "
                         + "from user "
                         + "where email = ?");//권한부여임->enum으로 설정해서 단순히 가져오기만?
     }
