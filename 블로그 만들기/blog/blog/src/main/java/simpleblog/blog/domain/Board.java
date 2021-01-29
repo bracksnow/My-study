@@ -22,19 +22,4 @@ public class Board extends DateEntity {
     @Column(nullable = false)
     @NotBlank(message = "내용을 입력하세요")
     private String content;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
-
-
-
-
-    
-
-
-
-
-
-
 }

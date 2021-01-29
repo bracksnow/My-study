@@ -20,7 +20,9 @@ public class UserService {
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
         user.setEnabled(true);
-        user.setRole(Role.USER);//기본적으로는 사용자로 저장하기
+        Role role = new Role();
+        role.setId(1l);
+        user.getRoles().add(role);
         return userRepository.save(user);
     }
 }

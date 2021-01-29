@@ -42,9 +42,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .usersByUsernameQuery("select email, password, enabled "
                         + "from user "
                         + "where email = ?")
-                .authoritiesByUsernameQuery("select email, role "
-                        + "from user "
-                        + "where email = ?");//권한부여임->enum으로 설정해서 단순히 가져오기만?
+                .authoritiesByUsernameQuery("select u.email, r.name "
+                        + "from user_role ur inner join user u on ur.user_id = u.id "
+                        + "inner join role r on ur.role_id = r.id "
+                        + "where u.email = ?");
     }
 
     @Bean
