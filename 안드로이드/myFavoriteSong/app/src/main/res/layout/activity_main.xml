@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/startText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택을 시작하시겠습니까?"
+        android:layout_margin="5dp">
+
+    </TextView>
+
+    <Switch
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시작함"
+        android:layout_margin="5dp">
+    </Switch>
+
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="좋아하는 노래는?"
+        android:visibility="gone"
+        android:layout_margin="5dp">
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="5dp">
+
+        <RadioButton
+            android:id="@+id/songOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오마이걸 돌핀"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/songTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀정원"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/songThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="불꽃놀이"></RadioButton>
+    </RadioGroup>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/songImage"
+        android:visibility="gone"
+        android:layout_margin="5dp">
+    </ImageView>
+    <Button
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종료"
+        android:layout_margin="5dp">
+    </Button>
+    <Button
+        android:id="@+id/rollback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="처음으로"
+        android:layout_margin="5dp">
+    </Button>
+
+
+
+</LinearLayout>
