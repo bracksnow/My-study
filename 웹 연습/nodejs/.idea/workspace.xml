@@ -102,7 +102,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a57dfff-77d0-4c7b-95be-86629f92e0ef" name="Default Changelist" comment="" />
+    <list default="true" id="4a57dfff-77d0-4c7b-95be-86629f92e0ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,8 +113,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -129,11 +131,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.16.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.36" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Node.js.path.js">
+  <component name="RunManager" selected="Node.js.restServer.js">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/simpleserver/index.js" working-dir="$PROJECT_DIR$/simpleserver">
+      <method v="2" />
+    </configuration>
     <configuration name="path.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/path.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="restServer.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/sample/restServer.js" working-dir="$PROJECT_DIR$/sample">
       <method v="2" />
     </configuration>
     <configuration name="url_practice.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/url_practice.js" working-dir="$PROJECT_DIR$">
@@ -141,6 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.restServer.js" />
+        <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.path.js" />
         <item itemvalue="Node.js.url_practice.js" />
       </list>
@@ -155,6 +167,10 @@
       <option name="presentableId" value="Default" />
       <updated>1616412884790</updated>
       <workItem from="1616412887442" duration="3388000" />
+      <workItem from="1616758701850" duration="10508000" />
+      <workItem from="1616806230420" duration="1239000" />
+      <workItem from="1616807575243" duration="28000" />
+      <workItem from="1616821743291" duration="13054000" />
     </task>
     <servers />
   </component>
@@ -171,24 +187,25 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1259" height="204" key="GridCell.Tab.0.bottom" timestamp="1616417453976">
+    <state width="1259" height="452" key="GridCell.Tab.0.bottom" timestamp="1616835046933">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1616417453976" />
-    <state width="1259" height="204" key="GridCell.Tab.0.center" timestamp="1616417453975">
+    <state width="1259" height="452" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1616835046933" />
+    <state width="1259" height="452" key="GridCell.Tab.0.center" timestamp="1616835046931">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1616417453975" />
-    <state width="1259" height="204" key="GridCell.Tab.0.left" timestamp="1616417453975">
+    <state width="1259" height="452" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1616835046931" />
+    <state width="1259" height="452" key="GridCell.Tab.0.left" timestamp="1616835046929">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1616417453975" />
-    <state width="1259" height="204" key="GridCell.Tab.0.right" timestamp="1616417453976">
+    <state width="1259" height="452" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1616835046929" />
+    <state width="1259" height="452" key="GridCell.Tab.0.right" timestamp="1616835046932">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1616417453976" />
+    <state width="1259" height="452" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1616835046932" />
     <state width="1259" height="204" key="GridCell.Tab.1.bottom" timestamp="1616417453976">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
