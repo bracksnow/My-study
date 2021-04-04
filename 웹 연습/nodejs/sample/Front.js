@@ -17,7 +17,7 @@ async function getProduct() { // 로딩 시 상품 가져오는 함수
                 }
                 productDiv.appendChild(span);
                 productDiv.appendChild(image);
-                list.appendChild(productDiv);//list에 product객체를 담아 웹으로 보여준다
+                list.appendChild(productDiv);//list에 product객체를 담아 웹으로 보여줌
             })
         });
     } catch (err) {

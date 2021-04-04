@@ -20,6 +20,7 @@ http.createServer(async (req, res) => {
             }
             try {
                 const data = await fs.readFile(`.${req.url}`);
+                console.log(req.url)
                 return res.end(data);
             } catch (err) {
             }
@@ -32,14 +33,13 @@ http.createServer(async (req, res) => {
                 });
                 // 요청의 body를 다 받은 후 실행됨
                 return req.on('end', () => {
-                    console.log('POST 본문(Body):', body);
                     const { product, price, count, image } = JSON.parse(body);
                     const pd = new Object();//상품을 객체로 만듦
                     pd.product = product;
                     pd.price = price;
                     pd.count = count;
                     pd.image = image;
-                    products.push(pd);//상품객체를 products 배열에 넣어준다
+                    products.push(pd);//상품객체를 products 배열에 넣어줌
                     res.writeHead(201, { 'Content-Type': 'text/plain; charset=utf-8' });
                     res.end('ok');
                 });
