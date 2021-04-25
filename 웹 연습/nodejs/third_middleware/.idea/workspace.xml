@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3123b10-644d-42a2-9477-fcbdc30c14a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../html/ExpertSystem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../html/my_introduce.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../html/railway-62849_1280.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Array.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../callback.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../class.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../closure.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desturcting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../global.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hosting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../let.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../myapp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../new.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../object.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../outter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../protype.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sort.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../static.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../this.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python/Solution_DBFS_h1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python/Solution_heap_h1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python/Solution_sort_h3.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1rYzhzG4mE6lr7rNO2RuFFFMmzM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3123b10-644d-42a2-9477-fcbdc30c14a6" name="Default Changelist" comment="" />
+      <created>1619167934078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619167934078</updated>
+      <workItem from="1619167935161" duration="5167000" />
+      <workItem from="1619344483272" duration="5881000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="407" y="141" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619179927956">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="407" y="141" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1619179927956" />
+    <state width="1259" height="486" key="GridCell.Tab.0.bottom" timestamp="1619350417895">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="486" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1619350417895" />
+    <state width="1259" height="486" key="GridCell.Tab.0.center" timestamp="1619350417895">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="486" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1619350417895" />
+    <state width="1259" height="486" key="GridCell.Tab.0.left" timestamp="1619350417895">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="486" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1619350417895" />
+    <state width="1259" height="486" key="GridCell.Tab.0.right" timestamp="1619350417895">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="486" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1619350417895" />
+  </component>
+</project>
