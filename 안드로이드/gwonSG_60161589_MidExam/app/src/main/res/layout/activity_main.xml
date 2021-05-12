@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" PREVIOUS " />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" NEXT " />
+    </LinearLayout>
+    <ViewFlipper
+        android:id="@+id/viewFlipper1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CCFFCC"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/Nougat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="50dp"
+                    android:padding="20dp"
+                    android:text="Nougat"
+                    android:background="#FCFDFC"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/Pie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nougat"
+                    android:layout_margin="50dp"
+                    android:padding="20dp"
+                    android:background="#FBFCFB"></TextView>
+
+                <TextView
+                    android:id="@+id/Oreo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oreo"
+                    android:layout_margin="50dp"
+                    android:padding="20dp"
+                    android:background="#FDFFFD"></TextView>
+
+                <TextView
+                    android:id="@+id/AndroidQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android Q"
+                    android:layout_margin="50dp"
+                    android:padding="20dp"
+                    android:background="#FEFFFE"></TextView>
+
+                <TextView
+                    android:id="@+id/AndroidR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android R"
+                    android:layout_margin="50dp"
+                    android:padding="20dp"
+                    android:background="#FCFDFC"></TextView>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#FFFFAA"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bird">
+            </ImageView>
+
+        </LinearLayout>
+    </ViewFlipper>
+
+</LinearLayout>

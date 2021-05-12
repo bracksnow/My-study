@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='gwonSG_60161589_MidExam'
